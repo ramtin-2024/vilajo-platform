@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
   
-<!-- Mirrored from axelit.piperweb.dev/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Aug 2026 13:58:13 GMT -->
+<!-- Mirrored from axelit.piperweb.dev/template/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Aug 2026 14:00:01 GMT -->
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-      content="Multipurpose, super Feb, powerful, clean modern responsive bootstrap 5 admin template"
+      content="قالب مدیریت بوت‌استرپ ۵ چندمنظوره، فوق‌العاده انعطاف‌پذیر، قدرتمند، مدرن و واکنش‌گرا، تمیز"
       name="description" />
     <meta
       content="قالب مدیریت, قالب مدیریت axelit, قالب داشبورد, قالب مدیریت فلت, قالب مدیریت واکنش‌گرا, اپلیکیشن وب"
@@ -18,41 +18,34 @@
     <title>قالب مدیریتی پریمیوم اکسلیت</title>
     <!--font-awesome-css-->
     <link href="../assets/vendor/fontawesome/css/all.css" rel="stylesheet" />
-
     <!-- Fonts -->
     <link href="../assets/fonts/estedad/fontface.css" rel="stylesheet" />
 
     <!-- iconoir icon css  -->
     <link href="../assets/vendor/ionio-icon/css/iconoir.css" rel="stylesheet" />
 
-    <!-- Animation css -->
+    <!-- animation css-->
     <link href="../assets/vendor/animation/animate.min.css" rel="stylesheet" />
 
     <!-- tabler icons-->
     <link href="../assets/vendor/tabler-icons/tabler-icons.css" rel="stylesheet" type="text/css" />
 
-    <!--flag Icon css-->
-    <link
-      href="../assets/vendor/flag-icons-master/flag-icon.css"
-      rel="stylesheet"
-      type="text/css" />
-
     <!-- Bootstrap css-->
     <link href="../assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- apexcharts css-->
-    <link href="../assets/vendor/apexcharts/apexcharts.css" rel="stylesheet" type="text/css" />
+    <!-- glight css -->
+    <link href="../assets/vendor/glightbox/glightbox.min.css" rel="stylesheet" />
 
-    <!-- simplebar css-->
-    <link href="../assets/vendor/simplebar/simplebar.css" rel="stylesheet" type="text/css" />
+    <!-- filepond css -->
+    <link href="../assets/vendor/filepond/filepond.css" rel="stylesheet" />
+    <link href="../assets/vendor/filepond/image-preview.min.css" rel="stylesheet" />
 
     <!-- slick css -->
     <link href="../assets/vendor/slick/slick.css" rel="stylesheet" />
     <link href="../assets/vendor/slick/slick-theme.css" rel="stylesheet" />
 
-    <!-- filepond css -->
-    <link href="../assets/vendor/filepond/filepond.css" rel="stylesheet" />
-    <link href="../assets/vendor/filepond/image-preview.min.css" rel="stylesheet" />
+    <!-- simplebar css-->
+    <link href="../assets/vendor/simplebar/simplebar.css" rel="stylesheet" type="text/css" />
 
     <!-- App css-->
     <link href="../assets/css/style.101.css" rel="stylesheet" type="text/css" />
@@ -337,7 +330,7 @@
                     <li><a href="heatmap.html">حرارتی</a></li>
                     <li><a href="treemap.html">درختی</a></li>
                     <li><a href="pie.html">دایره‌ای</a></li>
-                    <li><a href="radialbar.html">Radial bar</a></li>
+                    <li><a href="radialbar.html">Radialbar</a></li>
                     <li><a href="radar.html">رادار</a></li>
                   </ul>
                 </li>
@@ -381,7 +374,7 @@
                 <li><a href="textarea.html">Textarea</a></li>
                 <li><a href="clipboard.html">کلیپ‌بورد</a></li>
                 <li><a href="file_upload.html">آپلود فایل</a></li>
-                <li><a href="dual_listboxes.html">Dual Listbox</a></li>
+                <li><a href="dual_listboxes.html">Dual List Boxes</a></li>
                 <li><a href="default_forms.html">فرم‌های پیش‌فرض</a></li>
               </ul>
             </li>
@@ -1644,843 +1637,1573 @@
 
           <!-- Body main section starts -->
           <main>
-            <div class="container-fluid mt-3">
+            <div class="container-fluid">
+              <!-- Breadcrumb start -->
+              <div class="row m-1">
+                <div class="col-12">
+                  <h4 class="main-title">پروفایل</h4>
+                  <ul class="app-line-breadcrumbs mb-3">
+                    <li class="">
+                      <a class="f-s-14 f-w-500" href="#">
+                        <span>
+                          <i class="ph-duotone ph-stack f-s-16"></i>
+                          برنامه‌ها
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="f-s-14 f-w-500" href="#">پروفایل</a>
+                    </li>
+                    <li class="active">
+                      <a class="f-s-14 f-w-500" href="#">پروفایل</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Breadcrumb end -->
+
               <div class="row">
-                <div class="col-lg-6 col-xxl-4">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="card project-total-card">
-                        <div class="card-body">
-                          <div class="d-flex position-relative">
-                            <h5 class="text-dark txt-ellipsis-1">کل ساعات</h5>
-                            <div class="clock-box">
-                              <div class="clock">
-                                <div class="hour" id="hour"></div>
-                                <div class="min" id="min"></div>
-                                <div class="sec" id="sec"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <div class="d-flex">
-                              <h2 class="text-info-dark hour-display">00H</h2>
-                            </div>
-                            <div class="progress-labels mg-t-40">
-                              <span class="text-info">پربازده</span>
-                              <span class="text-info">میانه</span>
-                              <span class="text-info">بیکار</span>
-                            </div>
-                            <div class="custom-progress-container info-progress">
-                              <div class="progress-bar productive"></div>
-                              <div class="progress-bar middle"></div>
-                              <div class="progress-bar idle"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                      <div class="card bg-info-300 project-details-card">
-                        <div class="card-body">
-                          <div class="d-flex gap-2">
-                            <span class="badge bg-white-300 text-info-dark p-1 b-r-10">
-                              📱 اپلیکیشن موبایل
-                            </span>
-                            <span class="badge dashed-1-info text-info-dark ms-2 p-1 b-r-10">
-                              بازاریابی
-                            </span>
-                          </div>
-                          <div class="my-4">
-                            <h5 class="f-w-600 text-info-dark txt-ellipsis-1">پروژه آلفا</h5>
-                            <p class="text-info f-s-13 txt-ellipsis-1 mb-0">
-                              ایده‌های انقلابی، توانمندسازی نوآوری و پیشبرد موفقیت.
-                            </p>
-                          </div>
-                          <div class="d-flex align-items-center justify-content-between pt-3">
-                            <ul class="avatar-group">
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-light-primary b-2-primary">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/4.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-light-success b-2-success"
-                                data-bs-title="Lennon Briggs"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/5.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-light-info b-2-info"
-                                data-bs-title="Maya Horton"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/6.png" />
-                              </li>
-                            </ul>
-                            <span class="badge bg-white-300 text-info-dark ms-2">
-                              🔥 ۱ ساعت مانده
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                      <div class="card bg-success-300 project-details-card">
-                        <div class="card-body">
-                          <div class="d-flex gap-2">
-                            <span class="badge bg-white-300 text-success-dark p-1 b-r-10">
-                              ⚡ API
-                            </span>
-                            <span
-                              class="badge bg-transparent dashed-1-dark-light text-success-dark ms-2 p-1 b-r-10">
-                              توسعه وب
-                            </span>
-                          </div>
-                          <div class="my-4">
-                            <h5 class="f-w-600 text-success-dark txt-ellipsis-1">پروژه بتا</h5>
-                            <p class="text-success f-s-13 txt-ellipsis-1 mb-0">
-                              راهکارهای نوآورانه برای کارایی یکپارچه در مدیریت وظایف.
-                            </p>
-                          </div>
-                          <div class="d-flex align-items-center justify-content-between pt-3">
-                            <ul class="avatar-group">
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-light-primary b-2-primary">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/4.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-light-danger b-2-danger"
-                                data-bs-title="Maya Horton"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/6.png" />
-                              </li>
-                            </ul>
-                            <span class="badge bg-white-300 text-success-dark ms-2">
-                              ✨ ۲ روز مانده
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6">
-                      <div class="card core-teams-card">
-                        <div class="card-body">
-                          <div class="d-flex">
-                            <h5 class="text-dark f-w-600 txt-ellipsis-1">💼 تیم‌های اصلی</h5>
-                          </div>
-                          <div>
-                            <h2 class="text-warning-dark my-4 d-inline-flex align-items-baseline">
-                              1k
-                              <span class="f-s-12 text-dark">اعضای تیم</span>
-                            </h2>
-                            <ul class="avatar-group justify-content-start">
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden text-bg-primary b-2-light"
-                                data-bs-title="Sabrina Torres"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/4.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden text-bg-success b-2-light"
-                                data-bs-title="Eva Bailey"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/5.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden text-bg-danger b-2-light"
-                                data-bs-title="Michael Hughes"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/6.png" />
-                              </li>
-                              <li
-                                class="text-bg-secondary h-35 w-35 d-flex-center b-r-50"
-                                data-bs-title="10 More"
-                                data-bs-toggle="tooltip">
-                                10+
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xxl-4">
-                  <div class="row">
-                    <div class="col-12 mb-4">
-                      <div>
-                        <input
-                          class="file-uploader-box filelight file-light-info"
-                          data-allow-reorder="true"
-                          id="fileUploaderBox"
-                          multiple="multiple"
-                          type="file" />
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="project-expense" id="projectExpense"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xxl-4">
-                  <div class="card project-connect-card">
-                    <div class="card-body pb-0">
-                      <div class="text-center">
-                        <h5 class="mb-2 f-s-24">
-                          <span class="text-primary f-w-700">بی‌دردسر</span>
-                          شروع کنید
-                        </h5>
-                        <p class="f-s-14 text-dark pb-0 txt-ellipsis-2">
-                          ابزارهای تیم خود را به هم متصل کنید و یک نمای یکپارچه از پیشرفت هر پروژه،
-                          مهلت‌ها و مشارکت‌های تیمی را در اختیار داشته باشید.
-                        </p>
-                      </div>
-                      <div class="connect-chat-box">
-                        <div class="avatar-connect-box">
-                          <img
-                            alt="logo"
-                            class="avatar-connect-logo"
-                            src="../assets/images/dashboard/project/avatar.png" />
-                          <img
-                            alt="logo"
-                            class="dribbble-connect-logo"
-                            src="../assets/images/dashboard/project/dribbble.png" />
-                        </div>
-                        <img alt="img" src="../assets/images/dashboard/project/chat.png" />
-                        <img
-                          alt="logo"
-                          class="slack-logo animate__shakeY animate__animated animate__infinite animate__slower"
-                          src="../assets/images/dashboard/project/slack.png" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-xxl-3">
-                  <div class="p-3">
-                    <h5>ردیاب زمان</h5>
-                  </div>
-                  <div class="card">
-                    <div class="card-body position-relative">
-                      <div class="time-tracker">
-                        <div class="share-time">
-                          <div class="dropdown">
-                            <span
-                              aria-expanded="false"
-                              class="w-35 h-35 bg-primary-300 text-info-dark rounded p-2 d-flex-center"
-                              data-bs-toggle="dropdown"
-                              role="button">
-                              <i class="iconoir-share-android-solid"></i>
-                            </span>
-                            <ul class="dropdown-menu text-start dropdown-menu-start rounded">
-                              <li>
-                                <a class="dropdown-item rounded f-s-14" href="#">
-                                  <i
-                                    class="iconoir-instagram text-danger-dark me-2 f-s-18 align-text-top"></i>
-                                  اینستاگرام
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item rounded f-s-14" href="#">
-                                  <i
-                                    class="iconoir-twitter text-twitter me-2 f-s-18 align-text-top"></i>
-                                  توییتر
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item rounded f-s-14" href="#">
-                                  <i
-                                    class="iconoir-chat-lines text-whatsapp me-2 f-s-18 align-text-top"></i>
-                                  مسنجر
-                                </a>
-                              </li>
-                              <li>
-                                <a class="dropdown-item rounded f-s-14" href="#">
-                                  <i
-                                    class="iconoir-more-horiz text-dark me-2 f-s-18 align-text-top"></i>
-                                  سایر اپلیکیشن‌ها
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <h2 class="timer-display f-w-600">00:00:00</h2>
-                        <div class="controls">
-                          <button class="btn btn-light-primary icon-btn b-r-18" id="start-btn">
-                            <i class="iconoir-play-solid"></i>
-                          </button>
-                          <button class="btn btn-danger icon-btn b-r-18" disabled id="stop-btn">
-                            <i class="iconoir-square"></i>
-                          </button>
-                          <button class="btn btn-light-info icon-btn b-r-18" id="reset-btn">
-                            <i class="iconoir-refresh"></i>
-                          </button>
-                        </div>
-                      </div>
-
-                      <ul class="tracker-history-list app-scroll mt-3">
-                        <li class="bg-info-300">
-                          <div>
-                            <h6 class="text-info-dark mb-0">جلسه 1</h6>
-                          </div>
-                          <div class="text-dark f-w-600 ms-2">00:01:23</div>
-                        </li>
-
-                        <li class="bg-primary-300">
-                          <div>
-                            <h6 class="text-primary-dark mb-0">جلسه 2</h6>
-                          </div>
-                          <div class="text-dark f-w-600 ms-2">00:02:45</div>
-                        </li>
-                        <li class="bg-danger-300">
-                          <div>
-                            <h6 class="text-danger-dark mb-0">جلسه 3</h6>
-                          </div>
-                          <div class="text-dark f-w-600 ms-2">00:03:30</div>
-                        </li>
-                        <li class="bg-warning-300">
-                          <div>
-                            <h6 class="text-warning-dark mb-0">جلسه 4</h6>
-                          </div>
-                          <div class="text-dark f-w-600 ms-2">00:04:12</div>
-                        </li>
-                        <li class="bg-success-300">
-                          <div>
-                            <h6 class="text-success-dark mb-0">جلسه 5</h6>
-                          </div>
-                          <div class="text-dark f-w-600 ms-2">01:06:00</div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-7 col-xxl-6 order-1-md">
-                  <div class="p-3">
-                    <h5>وضعیت پروژه</h5>
-                  </div>
-                  <div class="card mb-0">
-                    <div class="card-body py-2 px-0 overflow-hidden">
-                      <div class="table-responsive app-scroll">
-                        <table class="table align-middle project-status-table mb-0">
-                          <thead>
-                            <tr>
-                              <th scope="col">پروژه</th>
-                              <th scope="col">وضعیت</th>
-                              <th scope="col">رهبر تیم</th>
-                              <th scope="col">اولویت</th>
-                              <th scope="col">ملاحظات</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-success-dark text-nowrap">بازطراحی وب</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-warning f-s-9 f-w-700">
-                                  در حال انجام
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="آتنا استوارت"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/2.png" />
-                                </a>
-                              </td>
-                              <td class="text-success-dark f-w-600">زیاد</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  مرحله طراحی تکمیل شد
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-warning-dark text-nowrap">اپلیکیشن موبایل</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-success f-s-9 f-w-700">
-                                  تکمیل شده
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="جین اسمیت"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/3.png" />
-                                </a>
-                              </td>
-                              <td class="text-secondary-dark f-w-600">متوسط</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  پروژه با موفقیت منتشر شد
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-danger-dark text-nowrap">کمپین</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-secondary f-s-9 f-w-700">
-                                  شروع نشده
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="مارک لی"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/4.png" />
-                                </a>
-                              </td>
-                              <td class="text-danger-dark f-w-600">کم</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  کمپین در دسامبر آغاز می‌شود
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-primary-dark text-nowrap">تجارت الکترونیک</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-warning f-s-9 f-w-700">
-                                  در حال انجام
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="آلیس جانسون"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/5.png" />
-                                </a>
-                              </td>
-                              <td class="text-success-dark f-w-600">زیاد</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  راه‌اندازی اولیه
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-success-dark text-nowrap">شبکه‌های اجتماعی</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-success f-s-9 f-w-700">
-                                  تکمیل شده
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="سوفیا گرین"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/4.png" />
-                                </a>
-                              </td>
-                              <td class="text-danger-dark f-w-600">کم</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  کمپین با موفقیت راه‌اندازی شد
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-success-dark text-nowrap">بهینه‌سازی سئو</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-warning f-s-9 f-w-700">
-                                  در حال انجام
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="لیام کارتر"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/5.png" />
-                                </a>
-                              </td>
-                              <td class="text-success-dark f-w-600">متوسط</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  تحلیل کلمات کلیدی در حال انجام است
-                                </span>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <h6 class="mb-0 text-success-dark text-nowrap">بازطراحی UI/UX</h6>
-                              </td>
-                              <td>
-                                <span class="badge text-light-info f-s-9 f-w-700">
-                                  برنامه‌ریزی شده
-                                </span>
-                              </td>
-                              <td class="f-w-600 text-dark">
-                                <a
-                                  class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary m-auto"
-                                  data-bs-title="اولیویا براون"
-                                  data-bs-toggle="tooltip">
-                                  <img
-                                    alt="avtar"
-                                    class="img-fluid"
-                                    src="../assets/images/avtar/6.png" />
-                                </a>
-                              </td>
-                              <td class="text-danger-dark f-w-600">کم</td>
-                              <td>
-                                <span class="text-dark f-s-14 f-w-500 text-nowrap">
-                                  <i class="ti ti-circle-filled me-2 f-s-6"></i>
-                                  منابع تخصیص داده شد
-                                </span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="table-footer">
-                    <p class="mb-0 f-s-15 f-w-500 txt-ellipsis-1">نمایش 7 تا 20 از 20 مورد</p>
-                    <ul class="pagination app-pagination justify-content-end">
-                      <li class="page-item disabled">
-                        <a class="page-link b-r-left" href="#">قبلی</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">بعدی</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="col-md-6 col-lg-5 col-xxl-3">
-                  <div class="p-3">
-                    <h5>وظایف امروز</h5>
-                  </div>
+                <div class="col-lg-3">
+                  <!-- profile tabs -->
                   <div class="card">
                     <div class="card-body">
-                      <div class="task-container slider">
-                        <div class="card task-card bg-danger-300">
-                          <div class="card-body">
-                            <h6 class="text-danger-dark txt-ellipsis-1">
-                              نهایی کردن پیشنهاد پروژه
-                            </h6>
-
-                            <ul class="avatar-group justify-content-start my-3">
-                              <li class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-primary">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/4.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-success"
-                                data-bs-title="Lennon Briggs"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/5.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-danger"
-                                data-bs-title="Maya Horton"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/6.png" />
-                              </li>
-                            </ul>
-
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div
-                                aria-valuemax="100"
-                                aria-valuemin="0"
-                                aria-valuenow="25"
-                                class="progress w-100"
-                                role="progressbar">
-                                <div
-                                  class="progress-bar bg-danger-dark progress-bar-striped progress-bar-animated"
-                                  style="width: 68%"></div>
-                              </div>
-                              <span class="badge bg-white-300 text-danger-dark ms-2">+ 68%</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="card">
-                          <div
-                            class="d-flex justify-content-between align-items-center rounded p-1 bg-primary-300">
-                            <span class="bg-primary h-35 w-35 d-flex-center rounded">
-                              <i class="iconoir-group f-s-18"></i>
+                      <div class="tab-wrapper">
+                        <ul class="profile-app-tabs">
+                          <li class="tab-link fw-medium f-s-16 f-w-600 active" data-tab="1">
+                            <i class="ti ti-user fw-bold"></i>
+                            پروفایل
+                          </li>
+                          <li class="tab-link fw-medium f-s-16 f-w-600" data-tab="2">
+                            <i class="ti ti-timeline fw-bold"></i>
+                            فعالیت‌ها
+                            <span class="badge rounded-pill bg-warning badge-notification">
+                              10+
+                              <span class="visually-hidden">پیام‌های خوانده نشده</span>
                             </span>
-                            <h6 class="mb-0 txt-ellipsis-1 flex-grow-1 px-2">جلسه</h6>
-                            <div class="d-flex gap-2">
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-more-horiz f-s-18"></i>
-                              </span>
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-copy f-s-18"></i>
-                              </span>
-                            </div>
+                          </li>
+                          <li class="tab-link fw-medium f-s-16 f-w-600" data-tab="3">
+                            <i class="ti ti-clipboard-data fw-bold"></i>
+                            پروژه‌ها
+                          </li>
+                          <li class="tab-link fw-medium f-s-16 f-w-600" data-tab="4">
+                            <i class="ti ti-photo-heart fw-bold"></i>
+                            پست‌ها
+                          </li>
+                          <li class="tab-link fw-medium f-s-16 f-w-600" data-tab="5">
+                            <i class="ti ti-users fw-bold"></i>
+                            دوستان
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card d-lg-block d-none">
+                    <div class="card-header">
+                      <h5>دوستان</h5>
+                    </div>
+                    <div class="card-body profile-friends">
+                      <div class="d-flex align-items-center">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-dark">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/2.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">بت هاگنز</div>
+                          <div class="text-muted f-s-12">توسعه دهنده وب</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-primary">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/10.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">فلیتا والش</div>
+                          <div class="text-muted f-s-12">طراح وب</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-success">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/14.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">لنورا</div>
+                          <div class="text-muted f-s-12">طراح UI/UX</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-warning">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/16.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">فلیتا والش</div>
+                          <div class="text-muted f-s-12">توسعه‌دهنده‌ی ری‌اکت</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-danger">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/13.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">امری مک‌کنزی</div>
+                          <div class="text-muted f-s-12">توسعه دهنده وب</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden bg-info">
+                          <img alt="image" class="img-fluid" src="../assets/images/avtar/1.png" />
+                        </div>
+                        <div class="flex-grow-1 ps-2">
+                          <div class="fw-medium">بت هاگنز</div>
+                          <div class="text-muted f-s-12">طراح وب</div>
+                        </div>
+                        <a class="btn btn-light-primary icon-btn b-r-22" href="#">
+                          <i class="ti ti-user-check"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <div class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-danger">
+                          <img alt="" class="img-fluid" src="../assets/images/avtar/16.png" />
+                        </div>
+                        <div class="flex-grow-1 px-2">
+                          <div class="f-w-600">هلی والش</div>
+                          <div class="text-muted f-s-12">۳ هفته</div>
+                        </div>
+                        <div><i class="ti ti-dots-vertical"></i></div>
+                      </div>
+                      <div class="post-div">
+                        <div class="row g-2 my-2">
+                          <div class="col-6">
+                            <a
+                              class="glightbox"
+                              data-glightbox="type: image; zoomable: true;"
+                              href="../assets/images/profile-app/19.jpg">
+                              <img
+                                alt=""
+                                class="w-100 rounded"
+                                src="../assets/images/profile-app/19.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-6">
+                            <a
+                              class="glightbox"
+                              data-glightbox="type: image; zoomable: true;"
+                              href="../assets/images/profile-app/27.jpg">
+                              <img
+                                alt=""
+                                class="w-100 rounded"
+                                src="../assets/images/profile-app/27.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-4">
+                            <a
+                              class="glightbox"
+                              data-glightbox="type: image; zoomable: true;"
+                              href="../assets/images/profile-app/28.jpg">
+                              <img
+                                alt=""
+                                class="w-100 rounded"
+                                src="../assets/images/profile-app/28.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-4">
+                            <a
+                              class="glightbox"
+                              data-glightbox="type: image; zoomable: true;"
+                              href="../assets/images/profile-app/29.jpg">
+                              <img
+                                alt=""
+                                class="w-100 rounded"
+                                src="../assets/images/profile-app/29.jpg" />
+                            </a>
+                          </div>
+                          <div class="col-4">
+                            <a
+                              class="glightbox"
+                              data-glightbox="type: image; zoomable: true;"
+                              href="../assets/images/profile-app/30.jpg">
+                              <img
+                                alt=""
+                                class="w-100 rounded"
+                                src="../assets/images/profile-app/30.jpg" />
+                            </a>
                           </div>
                         </div>
-
-                        <div class="card task-card bg-warning-300">
-                          <div class="card-body">
-                            <h6 class="text-warning-dark txt-ellipsis-1">طراحی صفحه اصلی</h6>
-                            <ul class="avatar-group justify-content-start my-3">
-                              <li class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-primary">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/3.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-info"
-                                data-bs-title="Sophia Turner"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/7.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-warning"
-                                data-bs-title="Lucas Green"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avtar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/8.png" />
-                              </li>
-                            </ul>
-
-                            <div class="d-flex justify-content-between align-items-center">
-                              <div
-                                aria-valuemax="100"
-                                aria-valuemin="0"
-                                aria-valuenow="25"
-                                class="progress w-100"
-                                role="progressbar">
-                                <div
-                                  class="progress-bar bg-warning-dark progress-bar-striped progress-bar-animated"
-                                  style="width: 35%"></div>
-                              </div>
-
-                              <span class="badge bg-white-400 text-secondary-dark ms-2">+ 35%</span>
-                            </div>
-                          </div>
+                        <p class="test-muted">هیچ چیز مثل گل های تازه نیست!......🌸🌼🌻</p>
+                        <div class="post-icon">
+                          <i class="ti ti-heart"></i>
+                          <i class="ti ti-brand-hipchat"></i>
+                          <i class="ti ti-send"></i>
+                          <p class="text-secondary">2k لایک</p>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="col-lg-5 col-xxl-6 col-box-5">
+                  <!-- profile content -->
+                  <div class="content-wrapper">
+                    <!-- tab 1 -->
+                    <div class="tabs-content active" id="tab-1">
+                      <div class="profile-content">
+                        <!-- story section -->
                         <div class="card">
-                          <div
-                            class="d-flex justify-content-between align-items-center rounded p-1 bg-info-300">
-                            <span class="bg-info h-35 w-35 d-flex-center rounded">
-                              <i class="iconoir-group f-s-18"></i>
-                            </span>
-                            <h6 class="mb-0 txt-ellipsis-1 flex-grow-1 px-2">جلسه</h6>
-                            <div class="d-flex gap-2">
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-more-horiz f-s-18"></i>
-                              </span>
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-copy f-s-18"></i>
-                              </span>
+                          <div class="card-header">
+                            <h5>استوری‌های ویژه</h5>
+                          </div>
+                          <div class="card-body">
+                            <div class="story-container app-arrow">
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/11.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/11.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-primary">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/1.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/12.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/12.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-danger">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/8.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/13.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/13.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-secondary">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/2.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/14.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/14.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-dark">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/3.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/15.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/15.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-warning">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/7.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/16.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/16.jpg" />
+                                  <div
+                                    class="h-50 w-50 d-flex-center b-r-50 overflow-hidden story-icon bg-info">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/4.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/17.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/17.jpg" />
+                                  <div
+                                    class="h-45 w-45 d-flex-center b-r-50 overflow-hidden story-icon bg-primary">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/5.png" />
+                                  </div>
+                                </a>
+                              </div>
+                              <div>
+                                <a
+                                  class="glightbox story"
+                                  data-glightbox="type: image; zoomable: true;"
+                                  href="../assets/images/profile-app/18.jpg">
+                                  <img
+                                    alt="image"
+                                    class="rounded img-fluid"
+                                    src="../assets/images/profile-app/18.jpg" />
+                                  <div
+                                    class="h-45 w-45 d-flex-center b-r-50 overflow-hidden story-icon bg-success">
+                                    <img
+                                      alt="image"
+                                      class="img-fluid"
+                                      src="../assets/images/avtar/6.png" />
+                                  </div>
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </div>
 
+                        <!-- post section-->
                         <div class="card">
-                          <div
-                            class="d-flex justify-content-between align-items-center rounded p-1 bg-success-300">
-                            <span class="bg-success h-35 w-35 d-flex-center rounded">
-                              <i class="iconoir-group f-s-18"></i>
-                            </span>
-                            <h6 class="mb-0 txt-ellipsis-1 flex-grow-1 px-2">جلسه</h6>
-                            <div class="d-flex gap-2">
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-more-horiz f-s-18"></i>
-                              </span>
-                              <span
-                                class="w-35 h-35 bg-white-300 text-info-dark rounded p-2 d-flex-center">
-                                <i class="iconoir-copy f-s-18"></i>
-                              </span>
+                          <div class="card-header">
+                            <h5>پست</h5>
+                          </div>
+                          <div class="card-body">
+                            <div class="col-12">
+                              <div class="photos-container">
+                                <div class="left-main-img img-box">
+                                  <a
+                                    class="glightbox"
+                                    data-glightbox="type: image; zoomable: true;"
+                                    href="../assets/images/profile-app/20.jpg">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/profile-app/20.jpg" />
+                                    <div class="transparent-box2">
+                                      <div class="captions">مثال تصویر ساده</div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div>
+                                  <div class="sub">
+                                    <div class="img-box">
+                                      <a
+                                        class="glightbox"
+                                        data-glightbox="type: image"
+                                        href="../assets/images/profile-app/21.jpg">
+                                        <img
+                                          alt="image"
+                                          class="rounded"
+                                          src="../assets/images/profile-app/21.jpg" />
+                                        <div class="transparent-box2">
+                                          <div class="captions">مثال تصویر ساده</div>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="img-box">
+                                      <a
+                                        class="glightbox"
+                                        data-glightbox="type: image"
+                                        href="../assets/images/profile-app/23.jpg">
+                                        <img
+                                          alt="image"
+                                          class="rounded"
+                                          src="../assets/images/profile-app/23.jpg" />
+                                        <div class="transparent-box2">
+                                          <div class="captions">مثال تصویر ساده</div>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="img-box">
+                                      <a
+                                        class="glightbox"
+                                        data-glightbox="type: image"
+                                        href="../assets/images/profile-app/24.jpg">
+                                        <img
+                                          alt="image"
+                                          class="rounded"
+                                          src="../assets/images/profile-app/24.jpg" />
+                                        <div class="transparent-box2">
+                                          <div class="captions">مثال تصویر ساده</div>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div class="img-box" id="multi-link">
+                                      <a
+                                        class="glightbox"
+                                        data-glightbox="type: image"
+                                        href="../assets/images/profile-app/22.jpg">
+                                        <img
+                                          alt="image"
+                                          class="rounded"
+                                          src="../assets/images/profile-app/22.jpg" />
+                                        <div class="transparent-box">
+                                          <div class="caption">+3</div>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="extra-images-container hide-element" id="more-img">
+                                  <a
+                                    class="glightbox"
+                                    data-glightbox="type: image"
+                                    href="../assets/images/blog-app/01.jpg">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/blog-app/01.jpg" />
+                                  </a>
+                                  <a
+                                    class="glightbox"
+                                    data-glightbox="type: image"
+                                    href="../assets/images/blog-app/02.jpg">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/blog-app/02.jpg" />
+                                  </a>
+                                  <a
+                                    class="glightbox"
+                                    data-glightbox="type: image"
+                                    href="../assets/images/blog-app/03.jpg">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/blog-app/03.jpg" />
+                                  </a>
+                                </div>
+                              </div>
+
+                              <div class="photos-container">
+                                <div class="left-main-img img-box">
+                                  <a
+                                    class="glightbox"
+                                    href="https://axelit.piperweb.dev/assets/images/profile-app/video.mp4">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/profile-app/26.jpg" />
+                                    <div class="transparent-box">
+                                      <div class="caption">
+                                        <i class="fa-solid fa-play-circle fa-fw"></i>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="right-main-img img-box">
+                                  <a
+                                    class="glightbox"
+                                    href="https://axelit.piperweb.dev/assets/images/profile-app/video.mp4">
+                                    <img
+                                      alt="image"
+                                      class="rounded"
+                                      src="../assets/images/profile-app/25.jpg" />
+                                    <div class="transparent-box">
+                                      <div class="caption">
+                                        <i class="fa-solid fa-play-circle fa-fw"></i>
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </div>
 
-                        <div class="card task-card bg-info-300">
-                          <div class="card-body">
-                            <h6 class="text-info-dark txt-ellipsis-1">توسعه یکپارچه‌سازی API</h6>
-                            <ul class="avatar-group justify-content-start my-3">
-                              <li class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-info">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/4.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-info"
-                                data-bs-title="Michael Johnson"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/6.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-warning"
-                                data-bs-title="Emily Brown"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/5.png" />
-                              </li>
-                            </ul>
+                    <!-- tab 2 -->
+                    <div class="tabs-content" id="tab-2">
+                      <div class="card">
+                        <div class="card-header">
+                          <h5>فعالیت‌ها</h5>
+                        </div>
+                        <div class="card-body">
+                          <ul class="app-timeline-box">
+                            <li class="timeline-section">
+                              <div class="timeline-icon">
+                                <span class="text-light-primary h-35 w-35 d-flex-center b-r-50">
+                                  و
+                                </span>
+                              </div>
+                              <div class="timeline-content">
+                                <div class="f-s-16">
+                                  <span class="text-primary f-s-16 mb-0">
+                                    ویلسون
+                                    <span class="text-secondary ms-2">
+                                      واکنش اضافه کرد در
+                                      <span class="badge text-outline-primary mx-2">
+                                        #سایت محصول
+                                      </span>
+                                      پست
+                                    </span>
+                                  </span>
+                                </div>
+                                <p class="f-w-500 mt-2 mb-0">
+                                  <i class="ph ph-clock me-1 align-middle"></i>
+                                  ‏ ۰۹:۰۰ صبح
+                                </p>
+                              </div>
+                            </li>
+                            <li class="timeline-section">
+                              <div class="timeline-icon">
+                                <span
+                                  class="text-light-info h-35 w-35 d-flex-center b-r-50 icon-direction">
+                                  <i class="ph-duotone ph-image f-s-18"></i>
+                                </span>
+                              </div>
+                              <div class="timeline-content">
+                                <p class="f-s-16 text-info mb-0">۲ تصویر و ۲ ویدیو بارگذاری شد</p>
 
-                            <div class="d-flex justify-content-between align-items-center">
+                                <div
+                                  class="app-timeline-info-text timeline-border-box me-2 ms-0 mt-3 p-3">
+                                  <div class="row">
+                                    <div class="col-sm-4">
+                                      <a
+                                        class="glightbox img-hover-zoom"
+                                        data-glightbox="type: image; zoomable: true;"
+                                        href="../assets/images/draggable/02.jpg">
+                                        <img
+                                          alt=""
+                                          class="w-100 rounded"
+                                          src="../assets/images/draggable/02.jpg" />
+                                      </a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <a
+                                        class="glightbox img-hover-zoom"
+                                        data-glightbox="type: image; zoomable: true;"
+                                        href="../assets/images/draggable/04.jpg">
+                                        <img
+                                          alt=""
+                                          class="w-100 rounded"
+                                          src="../assets/images/draggable/04.jpg" />
+                                      </a>
+                                    </div>
+                                    <div class="col-sm-4">
+                                      <a
+                                        class="glightbox img-hover-zoom"
+                                        data-glightbox="type: image; zoomable: true;"
+                                        href="../assets/images/draggable/01.jpg">
+                                        <img
+                                          alt=""
+                                          class="w-100 rounded"
+                                          src="../assets/images/draggable/01.jpg" />
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <p class="f-w-500 mt-2 mb-0">
+                                  <i class="ph ph-clock me-1 align-middle"></i>
+                                  به‌روز شد در ۱۲:۴۵ بعدازظهر
+                                </p>
+                              </div>
+                            </li>
+                            <li class="timeline-section">
+                              <div class="timeline-icon">
+                                <span class="text-light-success h-35 w-35 d-flex-center b-r-50">
+                                  دو
+                                </span>
+                              </div>
+                              <div class="timeline-content">
+                                <div class="f-s-16">
+                                  <span class="text-secondary">
+                                    <span class="text-success f-s-16 mb-0">دین ویزا</span>
+                                    واکنش اضافه کرد در
+                                    <span class="badge text-outline-success mx-2">#سایت محصول</span>
+                                    پست
+                                  </span>
+                                </div>
+                                <div class="timeline-border-box me-2 ms-0 mt-3">
+                                  <h6 class="mb-0">نیاز به یک ویژگی</h6>
+                                  <p class="mb-4 text-secondary">
+                                    سلام به همه، سوالی در مورد ایمیل مارکتینگ دارم. چه نکات و
+                                    ترفندهایی برای جلوگیری از رفتن ایمیل‌های بازاریابی خودکار به
+                                    پوشه تبلیغات یا هرزنامه وجود دارد؟
+                                  </p>
+                                  <span class="badge text-outline-success me-2 timeline-badge">
+                                    #🙂❤۱۰ واکنش
+                                  </span>
+                                  <span class="badge text-outline-success me-2">#✨۱۲ پاسخ</span>
+                                </div>
+                                <p class="f-w-500 mt-2 mb-0">
+                                  <i class="ph ph-clock me-1 align-middle"></i>
+                                  ‏۰۹:۰۰ صبح
+                                </p>
+                              </div>
+                            </li>
+                            <li class="timeline-section">
+                              <div class="timeline-icon">
+                                <span class="text-light-danger h-35 w-35 d-flex-center b-r-50">
+                                  B
+                                </span>
+                              </div>
+                              <div class="timeline-content">
+                                <div class="f-s-16">
+                                  <span class="text-danger f-s-16 mb-0">
+                                    بتی مانته
+                                    <span class="text-secondary ms-2">
+                                      درخواست پیوستن
+                                      <span class="badge text-outline-danger mx-2">
+                                        #تیم تحقیقاتی
+                                      </span>
+                                      گروه‌ها
+                                    </span>
+                                  </span>
+                                </div>
+                                <div class="mt-3">
+                                  <button class="btn btn-danger rounded-4" type="button">
+                                    قبول
+                                  </button>
+                                  <button class="btn btn-outline-danger rounded-4" type="button">
+                                    رد
+                                  </button>
+                                </div>
+                                <p class="f-w-500 mt-2 mb-0">
+                                  <i class="ph ph-clock me-1 align-middle"></i>
+                                  ‏۴ روز پیش
+                                </p>
+                              </div>
+                            </li>
+                            <li class="timeline-section">
+                              <div class="timeline-icon">
+                                <span class="text-light-primary h-35 w-35 d-flex-center b-r-50">
+                                  P
+                                </span>
+                              </div>
+                              <div class="timeline-content">
+                                <div class="f-s-16">
+                                  <span class="text-primary f-s-16 mb-0">
+                                    پینکی
+                                    <span class="text-secondary ms-2">
+                                      <span class="text-dark f-w-600 m-2">۲</span>
+                                      پیوست بارگذاری کرد
+                                      <span class="badge text-outline-primary me-2">
+                                        #تیم تحقیقاتی
+                                      </span>
+                                    </span>
+                                  </span>
+                                </div>
+
+                                <div class="mt-3">
+                                  <button class="btn btn-primary rounded-4" type="button">
+                                    قبول
+                                  </button>
+                                  <button class="btn btn-outline-primary rounded-4" type="button">
+                                    رد
+                                  </button>
+                                </div>
+                                <p class="f-w-500 mt-2 mb-0">
+                                  <i class="ph ph-clock me-1 align-middle"></i>
+                                  ‏۴ روز پیش
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- tab 3 -->
+                    <div class="tabs-content" id="tab-3">
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="card hover-effect">
+                            <div class="card-header">
+                              <div class="d-flex align-items-center">
+                                <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden">
+                                  <img
+                                    alt=""
+                                    class="img-fluid"
+                                    src="../assets/images/icons/logo2.png" />
+                                </div>
+                                <a
+                                  class="flex-grow-1 px-3"
+                                  href="project_details.html"
+                                  target="_blank">
+                                  <h6 class="m-0 text-dark f-w-600">طراحی</h6>
+                                  <div class="text-muted f-s-14 f-w-500">نمونه‌سازی</div>
+                                </a>
+                                <div class="dropdown">
+                                  <button
+                                    aria-expanded="false"
+                                    class="bg-none border-0"
+                                    data-bs-toggle="dropdown"
+                                    type="button">
+                                    <i class="ti ti-dots-vertical"></i>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                      <a class="dropdown-item" href="#">
+                                        <i class="ti ti-edit text-success"></i>
+                                        ویرایش
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a class="dropdown-item delete-button" href="#">
+                                        <i class="ti ti-trash text-danger"></i>
+                                        حذف
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex">
+                                <div>
+                                  <h6 class="text-dark f-s-14 f-w-500">
+                                    تاریخ شروع :
+                                    <span class="text-success">2024-02-03</span>
+                                  </h6>
+                                  <h6 class="text-dark f-s-14 f-w-500">
+                                    تاریخ پایان :
+                                    <span class="text-danger">2024-04-05</span>
+                                  </h6>
+                                </div>
+                                <div class="flex-grow-1 text-end">
+                                  <p class="f-w-500 text-secondary">قیمت‌گذاری</p>
+                                  <h6 class="f-w-600">۲۸۰$</h6>
+                                </div>
+                              </div>
+                              <p class="text-muted f-s-14 text-secondary txt-ellipsis-2">
+                                من فردی مشتاق، سخت‌کوش، قابل اعتماد و وقت‌شناس هستم. فردی روشن و
+                                پذیرا هستم
+                              </p>
+                              <div class="text-end mb-2">
+                                <span class="badge text-light-success">تکمیل شد</span>
+                              </div>
                               <div
                                 aria-valuemax="100"
                                 aria-valuemin="0"
-                                aria-valuenow="60"
+                                aria-valuenow="100"
                                 class="progress w-100"
                                 role="progressbar">
-                                <div
-                                  class="progress-bar bg-info-dark progress-bar-striped progress-bar-animated"
-                                  style="width: 60%"></div>
+                                <div class="progress-bar bg-success" style="width: 100%">100%</div>
                               </div>
-                              <span class="badge bg-white-400 text-secondary-dark ms-2">+ 60%</span>
+                            </div>
+                            <div class="card-footer">
+                              <div class="row">
+                                <div class="col-6">
+                                  <span class="text-dark f-w-600">
+                                    <i class="ti ti-brand-wechat"></i>
+                                    ‏ ۱۰ عضو
+                                  </span>
+                                </div>
+                                <div class="col-6">
+                                  <ul class="avatar-group float-end breadcrumb-start">
+                                    <li
+                                      class="h-25 w-25 d-flex-center b-r-50 text-bg-danger b-2-light position-relative"
+                                      data-bs-title="سابرینا تورس"
+                                      data-bs-toggle="tooltip">
+                                      <img
+                                        alt=""
+                                        class="img-fluid b-r-50 overflow-hidden"
+                                        src="../assets/images/avtar/4.png" />
+                                    </li>
+                                    <li
+                                      class="h-25 w-25 d-flex-center b-r-50 text-bg-success b-2-light position-relative"
+                                      data-bs-title="سابرینا تورس"
+                                      data-bs-toggle="tooltip">
+                                      <img
+                                        alt=""
+                                        class="img-fluid b-r-50 overflow-hidden"
+                                        src="../assets/images/avtar/1.png" />
+                                    </li>
+                                    <li
+                                      class="text-bg-primary h-25 w-25 d-flex-center b-r-50"
+                                      data-bs-title="۵ بیشتر"
+                                      data-bs-toggle="tooltip">
+                                      5+
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-
-                        <div class="card task-card bg-success-300">
-                          <div class="card-body">
-                            <h6 class="text-success-dark txt-ellipsis-1">تست بازخورد کاربران</h6>
-                            <ul class="avatar-group justify-content-start my-3">
-                              <li class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-primary">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/9.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-info"
-                                data-bs-title="Alice Smith"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/10.png" />
-                              </li>
-                              <li
-                                class="h-35 w-35 d-flex-center b-r-50 overflow-hidden bg-success"
-                                data-bs-title="John Doe"
-                                data-bs-toggle="tooltip">
-                                <img
-                                  alt="avatar"
-                                  class="img-fluid"
-                                  src="../assets/images/avtar/11.png" />
-                              </li>
-                            </ul>
-
-                            <div class="d-flex justify-content-between align-items-center">
+                        <div class="col-12">
+                          <div class="card hover-effect">
+                            <div class="card-header">
+                              <div class="d-flex align-items-center">
+                                <div class="h-40 w-40 d-flex-center b-r-50 overflow-hidden">
+                                  <img
+                                    alt=""
+                                    class="img-fluid"
+                                    src="../assets/images/icons/logo4.png" />
+                                </div>
+                                <a
+                                  class="flex-grow-1 px-3"
+                                  href="project_details.html"
+                                  target="_blank">
+                                  <h6 class="m-0 text-dark f-w-600">توسعه وب</h6>
+                                  <div class="text-muted f-s-14 f-w-500">اپلیکیشن هواشناسی</div>
+                                </a>
+                                <div class="dropdown">
+                                  <button
+                                    aria-expanded="false"
+                                    class="bg-none border-0"
+                                    data-bs-toggle="dropdown"
+                                    type="button">
+                                    <i class="ti ti-dots-vertical"></i>
+                                  </button>
+                                  <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                      <a class="dropdown-item" href="#">
+                                        <i class="ti ti-edit text-success"></i>
+                                        ویرایش
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a class="dropdown-item delete-button" href="#">
+                                        <i class="ti ti-trash text-danger"></i>
+                                        حذف
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <div class="d-flex">
+                                <div>
+                                  <h6 class="text-dark f-s-14 f-w-500">
+                                    تاریخ شروع :
+                                    <span class="text-success">2024-06-16</span>
+                                  </h6>
+                                  <h6 class="text-dark f-s-14 f-w-500">
+                                    تاریخ پایان :
+                                    <span class="text-danger">2024-01-01</span>
+                                  </h6>
+                                </div>
+                                <div class="flex-grow-1 text-end">
+                                  <p class="f-w-500 text-secondary">قیمت‌گذاری</p>
+                                  <h6 class="f-w-600">۴۰۰k$</h6>
+                                </div>
+                              </div>
+                              <p class="text-muted f-s-14 text-secondary txt-ellipsis-2">
+                                من فردی مشتاق، سخت‌کوش، قابل اعتماد و وقت‌شناس هستم. فردی روشن و
+                                پذیرا هستم
+                              </p>
+                              <div class="text-end mb-2">
+                                <span class="badge text-light-success">نوار پیشرفت</span>
+                              </div>
                               <div
                                 aria-valuemax="100"
                                 aria-valuemin="0"
-                                aria-valuenow="80"
+                                aria-valuenow="40"
                                 class="progress w-100"
                                 role="progressbar">
-                                <div
-                                  class="progress-bar bg-success-dark progress-bar-striped progress-bar-animated"
-                                  style="width: 80%"></div>
+                                <div class="progress-bar bg-primary" style="width: 40%">40%</div>
                               </div>
-                              <span class="badge bg-white-400 text-secondary-dark ms-2">+ 80%</span>
+                            </div>
+                            <div class="card-footer">
+                              <div class="row">
+                                <div class="col-6">
+                                  <span class="text-dark f-w-600">
+                                    <i class="ti ti-brand-wechat"></i>
+                                    ‏ ۳۴ عضو
+                                  </span>
+                                </div>
+                                <div class="col-6">
+                                  <ul class="avatar-group float-end breadcrumb-start">
+                                    <li
+                                      class="h-25 w-25 d-flex-center b-r-50 text-bg-danger b-2-light position-relative"
+                                      data-bs-title="سابرینا تورس"
+                                      data-bs-toggle="tooltip">
+                                      <img
+                                        alt=""
+                                        class="img-fluid b-r-50 overflow-hidden"
+                                        src="../assets/images/avtar/4.png" />
+                                    </li>
+                                    <li
+                                      class="h-25 w-25 d-flex-center b-r-50 text-bg-success b-2-light position-relative"
+                                      data-bs-title="سابرینا تورس"
+                                      data-bs-toggle="tooltip">
+                                      <img
+                                        alt=""
+                                        class="img-fluid b-r-50 overflow-hidden"
+                                        src="../assets/images/avtar/1.png" />
+                                    </li>
+                                    <li
+                                      class="h-25 w-25 d-flex-center b-r-50 text-bg-success b-2-light position-relative"
+                                      data-bs-title="سابرینا تورس"
+                                      data-bs-toggle="tooltip">
+                                      <img
+                                        alt=""
+                                        class="img-fluid b-r-50 overflow-hidden"
+                                        src="../assets/images/avtar/5.png" />
+                                    </li>
+                                    <li
+                                      class="text-bg-primary h-25 w-25 d-flex-center b-r-50"
+                                      data-bs-title="۱۰ بیشتر"
+                                      data-bs-toggle="tooltip">
+                                      10+
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
+                        </div>
+                        <div class="col-12">
+                          <div class="card">
+                            <div class="card-header">
+                              <h5>پیام‌های مشتری</h5>
+                            </div>
+                            <div class="card-body">
+                              <ul class="client-list">
+                                <li>
+                                  <div
+                                    class="d-flex align-items-center justify-content-between position-relative">
+                                    <span
+                                      class="bg-danger h-35 w-35 d-flex-center b-r-50 position-absolute">
+                                      EM
+                                    </span>
+                                    <div class="mg-s-40">
+                                      <span class="f-w-500">الیسا موئن</span>
+                                    </div>
+                                    <div>
+                                      <i class="ti ti-star fs-5"></i>
+                                    </div>
+                                  </div>
+                                  <p class="text-muted mt-2">
+                                    خیلی خوب بود.🥳 می‌توانیم با وظیفه بعدی ادامه دهیم.
+                                  </p>
+                                </li>
+                                <li>
+                                  <div
+                                    class="d-flex align-items-center justify-content-between position-relative">
+                                    <span
+                                      class="bg-light-secondary h-35 w-35 d-flex-center b-r-50 position-absolute">
+                                      <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <div class="mg-s-40">
+                                      <span class="f-w-500">مارک</span>
+                                    </div>
+                                    <div>
+                                      <i class="ti ti-star fs-5"></i>
+                                    </div>
+                                  </div>
+                                  <p class="text-muted mt-2">
+                                    سلام، می‌تونی درباره پیشرفت پروژه به من بگی؟ منتظر پاسخت هستم.
+                                  </p>
+                                </li>
+                                <li>
+                                  <div
+                                    class="d-flex align-items-center justify-content-between position-relative">
+                                    <span
+                                      class="bg-primary h-35 w-35 d-flex-center b-r-50 position-absolute">
+                                      D
+                                    </span>
+                                    <div class="mg-s-40">
+                                      <span class="f-w-500">دیوید</span>
+                                    </div>
+                                    <div>
+                                      <i class="ti ti-star fs-5"></i>
+                                    </div>
+                                  </div>
+                                  <p class="text-muted mt-3">
+                                    فوق‌العاده! 🤩 من دوستش دارم. می‌توانیم جلسه‌ای برای بعدی تنظیم
+                                    کنیم.
+                                  </p>
+                                </li>
+                                <li>
+                                  <div
+                                    class="d-flex align-items-center justify-content-between position-relative">
+                                    <span
+                                      class="bg-primary h-35 w-35 d-flex-center b-r-50 position-absolute">
+                                      J
+                                    </span>
+                                    <div class="mg-s-40">
+                                      <span class="f-w-500">جسیکا</span>
+                                    </div>
+                                    <div class="float-end">
+                                      <i class="ti ti-star fs-5"></i>
+                                    </div>
+                                  </div>
+                                  <p class="text-muted mt-2">
+                                    واقعا تحت تاثیر قرار گرفتم! نمی‌توانم صبر کنم تا نتیجه نهایی را
+                                    ببینم.
+                                  </p>
+                                </li>
+                                <li>
+                                  <div
+                                    class="d-flex align-items-center justify-content-between position-relative">
+                                    <span
+                                      class="bg-light-secondary h-35 w-35 d-flex-center b-r-50 position-absolute">
+                                      E
+                                    </span>
+                                    <div class="mg-s-40">
+                                      <span class="f-w-500">المر</span>
+                                    </div>
+                                    <div>
+                                      <i class="ti ti-star fs-5"></i>
+                                    </div>
+                                  </div>
+                                  <p class="text-muted mt-3">
+                                    سلام! می‌توانیم برای هفته آینده جلسه‌ای تنظیم کنیم.
+                                  </p>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- tab 4 -->
+                    <div class="tabs-content" id="tab-4">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="d-flex align-items-center">
+                            <div class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-danger">
+                              <img
+                                alt="avtar"
+                                class="img-fluid"
+                                src="../assets/images/avtar/9.png" />
+                            </div>
+                            <div class="flex-grow-1 px-2">
+                              <div class="f-w-500">نینفا مونالدو</div>
+                              <div class="text-muted f-s-12">۲۰ دقیقه پیش</div>
+                            </div>
+                            <div><i class="ti ti-dots-vertical"></i></div>
+                          </div>
+                          <div class="post-div">
+                            <div class="post"></div>
+                            <p class="test-muted">کاوش در افق‌های جدید، هر بار یک مقصد.🌸✨</p>
+                            <div class="post-icon">
+                              <i class="ti ti-heart"></i>
+                              <i class="ti ti-brand-hipchat"></i>
+                              <i class="ti ti-send"></i>
+                              <p>10k لایک</p>
+                            </div>
+                          </div>
+                          <div class="Comment-box mb-3">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-primary">
+                                <img
+                                  alt=""
+                                  class="img-fluid"
+                                  src="../assets/images/avtar/woman.jpg" />
+                              </div>
+                              <div class="flex-grow-1 px-2">
+                                <div class="f-w-600">بت هاگنز</div>
+                                <div class="text-muted f-s-12">۱ دقیقه</div>
+                              </div>
+                              <div><i class="ti ti-dots-vertical"></i></div>
+                            </div>
+                            <div class="mt-2">
+                              <p>عاشق سبکت هستم! به موفقیت ادامه بده.</p>
+                            </div>
+                          </div>
+                          <div class="Comment-box">
+                            <div class="d-flex align-items-center">
+                              <div
+                                class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-warning">
+                                <img alt="" class="img-fluid" src="../assets/images/avtar/4.png" />
+                              </div>
+                              <div class="flex-grow-1 px-2">
+                                <div class="f-w-600">امری مک‌کنزی</div>
+                                <div class="text-muted f-s-12">۱۲ دقیقه</div>
+                              </div>
+                              <div><i class="ti ti-dots-vertical"></i></div>
+                            </div>
+                            <div class="mt-2">
+                              <p>پست فوق‌العاده‌ای بود! بی‌صبرانه منتظر ادامه‌اش هستم.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="post-container">
+                            <input
+                              class="post-upload"
+                              data-allow-reorder="true"
+                              id="id"
+                              multiple="multiple"
+                              type="file" />
+                          </div>
+                          <div class="app-form mt-3">
+                            <div class="input-group" dir="ltr">
+                              <input dir="rtl" class="form-control" placeholder="پست" type="text" />
+                              <span class="input-group-text text-light-primary b-1-secondary">
+                                <i class="ti ti-mood-smile-beam"></i>
+                              </span>
+                              <span class="input-group-text text-light-primary b-1-secondary">
+                                <i class="ti ti-pencil-plus"></i>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="float-end">
+                            <button class="btn btn-primary mt-2" type="button">
+                              <i class="ti ti-photo-plus"></i>
+                              پست
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- tab 5 -->
+                    <div class="tabs-content" id="tab-5">
+                      <div class="row profile-friend-box">
+                        <div class="col-12">
+                          <div class="row">
+                            <div class="col-xxl-6 box-col">
+                              <div class="card friend-list-card">
+                                <div class="card-body">
+                                  <div class="d-flex align-items-center">
+                                    <div
+                                      class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-dark position-absolute">
+                                      <img
+                                        alt="image"
+                                        class="img-fluid"
+                                        src="../assets/images/avtar/2.png" />
+                                    </div>
+                                    <div class="flex-grow-1 mg-s-55">
+                                      <div class="f-w-500">فلیتا والش</div>
+                                      <div class="text-muted f-s-12">توسعه‌دهنده وب</div>
+                                    </div>
+                                    <a
+                                      class="btn btn-light-success icon-btn b-r-22"
+                                      href="chat.html"
+                                      target="_blank">
+                                      <i class="ti ti-brand-hipchat"></i>
+                                    </a>
+                                  </div>
+                                  <div class="mt-4 friend-list-content">
+                                    <p class="mb-0">
+                                      توسعه‌دهنده وب 👩‍💼 در
+                                      <span class="text-primary f-w-500">@TechFirm</span>
+                                      . ساخت راهکارهای نوآورانه برای
+                                      <span class="text-primary f-w-500">@PersonalProject</span>
+                                      در اوقات فراغت 🕐.
+                                    </p>
+                                    <div class="app-divider-v dashed m-0 py-3"></div>
+                                    <p class="f-s-16 text-secondary mb-0">
+                                      <span class="text-dark f-w-500">14k</span>
+                                      فالور
+                                      <span class="text-dark f-w-500 ms-2">8k</span>
+                                      فالوینگ
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xxl-6 box-col">
+                              <div class="card friend-list-card">
+                                <div class="card-body">
+                                  <div class="d-flex align-items-center">
+                                    <div
+                                      class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-primary position-absolute">
+                                      <img
+                                        alt="image"
+                                        class="img-fluid"
+                                        src="../assets/images/avtar/16.png" />
+                                    </div>
+                                    <div class="flex-grow-1 mg-s-55">
+                                      <div class="fw-medium">بت هاگنز</div>
+                                      <div class="text-muted f-s-12">طراح وب</div>
+                                    </div>
+                                    <a
+                                      class="btn btn-light-success icon-btn b-r-22"
+                                      href="chat.html"
+                                      target="_blank">
+                                      <i class="ti ti-brand-hipchat"></i>
+                                    </a>
+                                  </div>
+                                  <div class="mt-4 friend-list-content">
+                                    <p class="mb-0">
+                                      "تبدیل ایده‌ها به وب‌سایت‌های بصری خیره‌کننده 💻 برای
+                                      <span class="text-primary f-w-500">@FreelanceProject</span>
+                                      در ساعات آزاد."
+                                    </p>
+                                    <div class="app-divider-v dashed m-0 py-3"></div>
+                                    <p class="f-s-16 text-secondary mb-0">
+                                      <span class="text-dark f-w-500">14k</span>
+                                      فالور
+                                      <span class="text-dark f-w-500 ms-2">8k</span>
+                                      فالوینگ
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xxl-6 box-col">
+                              <div class="card friend-list-card equal-card">
+                                <div class="card-body">
+                                  <div class="d-flex align-items-center">
+                                    <div
+                                      class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-warning position-absolute">
+                                      <img
+                                        alt="image"
+                                        class="img-fluid"
+                                        src="../assets/images/avtar/1.png" />
+                                    </div>
+                                    <div class="flex-grow-1 mg-s-55">
+                                      <div class="fw-medium">هلی والش</div>
+                                      <div class="text-muted f-s-12">طراح UI/UX</div>
+                                    </div>
+                                    <a
+                                      class="btn btn-light-success icon-btn b-r-22"
+                                      href="chat.html"
+                                      target="_blank">
+                                      <i class="ti ti-brand-hipchat"></i>
+                                    </a>
+                                  </div>
+                                  <div class="mt-3 friend-list-content">
+                                    <p class="mb-0">
+                                      "خلق تجربه‌های شهودی، یک پیکسل در هر بار 📏📈."
+                                    </p>
+                                    <div class="app-divider-v dashed m-0 py-3"></div>
+                                    <p class="f-s-16 text-secondary mb-0">
+                                      <span class="text-dark f-w-500">14k</span>
+                                      فالور
+                                      <span class="text-dark f-w-500 ms-2">8k</span>
+                                      فالوینگ
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xxl-6 box-col">
+                              <div class="card friend-list-card">
+                                <div class="card-body">
+                                  <div class="d-flex align-items-center">
+                                    <div
+                                      class="h-45 w-45 d-flex-center b-r-50 overflow-hidden bg-danger position-absolute">
+                                      <img
+                                        alt="image"
+                                        class="img-fluid"
+                                        src="../assets/images/avtar/10.png" />
+                                    </div>
+                                    <div class="flex-grow-1 mg-s-55">
+                                      <div class="fw-medium">لنورا</div>
+                                      <div class="text-muted f-s-12">توسعه‌دهنده React</div>
+                                    </div>
+                                    <a
+                                      class="btn btn-light-success icon-btn b-r-22"
+                                      href="chat.html"
+                                      target="_blank">
+                                      <i class="ti ti-brand-hipchat"></i>
+                                    </a>
+                                  </div>
+                                  <div class="mt-3 friend-list-content">
+                                    <p class="mb-0">
+                                      "خلق رابط‌های کاربری پویا، واکنش‌گرا و کارآمد با قدرت ⚡
+                                      ری‌اکت."
+                                    </p>
+                                    <div class="app-divider-v dashed m-0 py-3"></div>
+                                    <p class="f-s-16 text-secondary mb-0">
+                                      <span class="text-dark f-w-500">14k</span>
+                                      فالور
+                                      <span class="text-dark f-w-500 ms-2">8k</span>
+                                      فالوینگ
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="card equal-card">
+                                <div class="card-header">
+                                  <h5>درخواست‌های دوستی</h5>
+                                </div>
+                                <div class="card-body">
+                                  <ul class="friend-list">
+                                    <li class="d-flex align-items-center position-relative">
+                                      <div
+                                        class="h-50 w-50 d-flex-center b-r-50 overflow-hidden position-absolute bg-danger">
+                                        <img
+                                          alt="image"
+                                          class="img-fluid"
+                                          src="../assets/images/avtar/1.png" />
+                                      </div>
+                                      <div class="flex-grow-1 mg-s-50">
+                                        <h6 class="mb-0 fw-medium text-ellipsis">@Bette</h6>
+                                        <p class="text-muted mb-0">توسعه‌دهنده وب</p>
+                                      </div>
+                                      <a class="btn btn-light-primary b-r-5 me-2" href="#">
+                                        <i class="ti ti-user-check me-2"></i>
+                                        <span>دنبال کردن</span>
+                                      </a>
+                                      <a class="btn btn-light-danger b-r-5" href="#">
+                                        <i class="ti ti-user-x me-2"></i>
+                                        <span>حذف</span>
+                                      </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-3 position-relative">
+                                      <div
+                                        class="h-50 w-50 d-flex-center b-r-50 overflow-hidden position-absolute bg-success">
+                                        <img
+                                          alt="image"
+                                          class="img-fluid"
+                                          src="../assets/images/avtar/10.png" />
+                                      </div>
+                                      <div class="flex-grow-1 mg-s-50">
+                                        <h6 class="mb-0 fw-medium text-ellipsis">@Fleta</h6>
+                                        <p class="text-muted mb-0">طراح وب</p>
+                                      </div>
+                                      <a class="btn btn-light-primary b-r-5 me-2" href="#">
+                                        <i class="ti ti-user-check me-2"></i>
+                                        <span>دنبال کردن</span>
+                                      </a>
+                                      <a class="btn btn-light-danger b-r-5" href="#">
+                                        <i class="ti ti-user-x me-2"></i>
+                                        <span>حذف</span>
+                                      </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-3 position-relative">
+                                      <div
+                                        class="h-50 w-50 d-flex-center b-r-50 overflow-hidden position-absolute bg-secondary">
+                                        <img
+                                          alt="image"
+                                          class="img-fluid"
+                                          src="../assets/images/avtar/14.png" />
+                                      </div>
+                                      <div class="flex-grow-1 mg-s-50">
+                                        <h6 class="mb-0 fw-medium text-ellipsis">@Lenora</h6>
+                                        <p class="text-muted mb-0">طراح UI/UX</p>
+                                      </div>
+                                      <a class="btn btn-light-primary b-r-5 me-2" href="#">
+                                        <i class="ti ti-user-check me-2"></i>
+                                        <span>دنبال کردن</span>
+                                      </a>
+                                      <a class="btn btn-light-danger b-r-5" href="#">
+                                        <i class="ti ti-user-x me-2"></i>
+                                        <span>حذف</span>
+                                      </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-3 position-relative">
+                                      <div
+                                        class="h-50 w-50 d-flex-center b-r-50 overflow-hidden position-absolute bg-warning">
+                                        <img
+                                          alt="image"
+                                          class="img-fluid"
+                                          src="../assets/images/avtar/12.png" />
+                                      </div>
+                                      <div class="flex-grow-1 mg-s-50">
+                                        <h6 class="mb-0 fw-medium text-ellipsis">@Olive</h6>
+                                        <p class="text-muted mb-0">توسعه‌دهنده</p>
+                                      </div>
+                                      <a class="btn btn-light-primary b-r-5 me-2" href="#">
+                                        <i class="ti ti-user-check me-2"></i>
+                                        <span>دنبال کردن</span>
+                                      </a>
+                                      <a class="btn btn-light-danger b-r-5" href="#">
+                                        <i class="ti ti-user-x me-2"></i>
+                                        <span>حذف</span>
+                                      </a>
+                                    </li>
+                                    <li class="d-flex align-items-center mt-3 position-relative">
+                                      <div
+                                        class="h-50 w-50 d-flex-center b-r-50 overflow-hidden position-absolute bg-primary">
+                                        <img
+                                          alt="image"
+                                          class="img-fluid"
+                                          src="../assets/images/avtar/2.png" />
+                                      </div>
+                                      <div class="flex-grow-1 mg-s-50">
+                                        <h6 class="mb-0 fw-medium text-ellipsis">@Mason</h6>
+                                        <p class="text-muted mb-0">توسعه‌دهنده</p>
+                                      </div>
+                                      <a class="btn btn-light-primary b-r-5 me-2" href="#">
+                                        <i class="ti ti-user-check me-2"></i>
+                                        <span>دنبال کردن</span>
+                                      </a>
+                                      <a class="btn btn-light-danger b-r-5" href="#">
+                                        <i class="ti ti-user-x me-2"></i>
+                                        <span>حذف</span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-xxl-3 col-box-4 order-lg--1">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="profile-container">
+                        <div class="image-details">
+                          <div class="profile-image"></div>
+                          <div class="profile-pic">
+                            <div class="avatar-upload">
+                              <div class="avatar-edit">
+                                <input accept=".png, .jpg, .jpeg" id="imageUpload" type="file" />
+                                <label for="imageUpload"><i class="ti ti-photo-heart"></i></label>
+                              </div>
+                              <div class="avatar-preview">
+                                <div id="imgPreview"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="person-details">
+                          <h5 class="f-w-600">
+                            نینفا مونالدو
+                            <img
+                              alt="instagram-check-mark"
+                              class="w-20 h-20"
+                              src="../assets/images/profile-app/01.png" />
+                          </h5>
+                          <p>طراح و توسعه‌دهنده وب</p>
+                          <div class="details">
+                            <div>
+                              <h4 class="text-primary">10</h4>
+                              <p class="text-secondary">پست</p>
+                            </div>
+                            <div>
+                              <h4 class="text-primary">3.4k</h4>
+                              <p class="text-secondary">فالور</p>
+                            </div>
+                            <div>
+                              <h4 class="text-primary">1k</h4>
+                              <p class="text-secondary">فالوینگ</p>
+                            </div>
+                          </div>
+                          <div class="my-2">
+                            <button class="btn btn-primary b-r-22" id="followButton" type="button">
+                              <i class="ti ti-user"></i>
+                              دنبال کردن
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header">
+                      <h5>درباره من</h5>
+                    </div>
+                    <div class="card-body">
+                      <p class="text-muted f-s-13">
+                        سلام! من، نینفا مونالدو هستم. طراح وب متعهد با بیش از پنج سال سابقه و درک
+                        قوی از Adobe Creative Suite، HTML5، CSS3 و جاوا. مشتاقم که توانایی‌های
+                        استثنایی توسعه front-end خود را به صنعت خرده‌فروشی ارائه دهم.
+                      </p>
+                      <div class="about-list">
+                        <div>
+                          <span class="fw-medium">
+                            <i class="ti ti-briefcase"></i>
+                            اشتیاق به کار
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">بخش IT</span>
+                        </div>
+                        <div>
+                          <span class="fw-medium">
+                            <i class="ti ti-mail"></i>
+                            ایمیل
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">Ninfa@gmail.com</span>
+                        </div>
+                        <div>
+                          <span class="fw-medium">
+                            <i class="ti ti-phone rtl-icon-flipped"></i>
+                            تلفن
+                          </span>
+                          <span class="float-end f-s-13 text-secondary" dir="ltr">
+                            +98 912 345 678
+                          </span>
+                        </div>
+                        <div>
+                          <span class="fw-medium">
+                            <i class="ti ti-cake"></i>
+                            تاریخ تولد
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">24 بهمن</span>
+                        </div>
+                        <div>
+                          <span class="fw-semibold">
+                            <i class="ti ti-map-pin"></i>
+                            مکان
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">Via Partenope, 117</span>
+                        </div>
+                        <div>
+                          <span class="fw-semibold">
+                            <i class="ti ti-device-laptop"></i>
+                            وبسایت
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">Ninfa_devWWW.com</span>
+                        </div>
+                        <div>
+                          <span class="fw-semibold">
+                            <i class="ti ti-brand-github"></i>
+                            گیت‌هاب
+                          </span>
+                          <span class="float-end f-s-13 text-secondary">Ninfa_dev</span>
                         </div>
                       </div>
                     </div>
@@ -2528,44 +3251,6 @@
       <!-- Footer Section ends-->
     </div>
 
-    <!-- modal -->
-
-    <div class="modal" data-bs-backdrop="static" id="welcomeCard">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content welcome-card">
-          <div class="modal-body p-0">
-            <div class="text-center position-relative welcome-card-content z-1 p-3">
-              <div class="text-end position-relative z-1">
-                <i
-                  class="ti ti-x fs-5 f-w-600"
-                  style="color: rgba(var(--bs-dark-rgb), 1) !important"
-                  data-bs-dismiss="modal"></i>
-              </div>
-              <h2 class="f-w-700 text-primary-dark mb-5 pe-2">
-                <span>خوش آمدید!</span>
-                <img
-                  alt="gif"
-                  class="w-45 d-inline align-baseline"
-                  src="../assets/images/dashboard/ecommerce-dashboard/celebration.gif" />
-              </h2>
-
-              <div class="modal-img-box">
-                <img alt="img" class="img-fluid" src="../assets/images/modals/welcome-1-fa.png" />
-              </div>
-              <div class="modal-btn mb-4">
-                <button
-                  class="btn btn-primary text-white btn-sm rounded"
-                  data-bs-dismiss="modal"
-                  type="button">
-                  شروع کنید
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!--customizer-->
     <div id="customizer"></div>
 
@@ -2578,20 +3263,11 @@
     <!-- Simple bar js-->
     <script src="../assets/vendor/simplebar/simplebar.js"></script>
 
-    <!-- apexcharts -->
-    <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="../assets/vendor/apexcharts/column/dayjs.min.js"></script>
-    <script src="../assets/vendor/apexcharts/column/quarterOfYear.min.js"></script>
-    <script src="../assets/vendor/apexcharts/timelinechart/moment.min.js"></script>
-
-    <!-- Customizer js-->
-    <script src="../assets/js/customizer.js"></script>
-
     <!-- phosphor js -->
     <script src="../assets/vendor/phosphor/phosphor.js"></script>
 
-    <!-- slick-file -->
-    <script src="../assets/vendor/slick/slick.min.js"></script>
+    <!-- Glight js -->
+    <script src="../assets/vendor/glightbox/glightbox.min.js"></script>
 
     <!-- filepond -->
     <script src="../assets/vendor/filepond/file-encode.min.js"></script>
@@ -2601,12 +3277,19 @@
     <script src="../assets/vendor/filepond/image-preview.min.js"></script>
     <script src="../assets/vendor/filepond/filepond.min.js"></script>
 
-    <!-- Project Dashboard js-->
-    <script src="../assets/js/project_dashboard.js"></script>
+    <!-- slick-file -->
+    <script src="../assets/vendor/slick/slick.min.js"></script>
+    <script src="../assets/vendor/shepherdjs/shepherd.js"></script>
+
+    <!-- js -->
+    <script src="../assets/js/profile.js"></script>
 
     <!-- App js-->
     <script src="../assets/js/script.101.js"></script>
+
+    <!-- Customizer js-->
+    <script src="../assets/js/customizer.js"></script>
   </body>
 
-<!-- Mirrored from axelit.piperweb.dev/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Aug 2026 13:59:17 GMT -->
+<!-- Mirrored from axelit.piperweb.dev/template/profile.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 28 Aug 2026 14:00:10 GMT -->
 </html>
