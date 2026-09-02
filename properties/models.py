@@ -34,6 +34,9 @@ class Property(models.Model):
     )
     beds = models.PositiveIntegerField(verbose_name="تعداد تخت")
     bathrooms = models.PositiveIntegerField(default=1, verbose_name="تعداد حمام")
+    toilets = models.PositiveIntegerField(
+        default=1, verbose_name="تعداد سرویس بهداشتی "
+    )
     building_area = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name="مساحت ساختمان"
     )
@@ -226,6 +229,36 @@ class PropertyLocation(models.Model):
 
 
 # ==================================================
+#                       Amenity
+# ==================================================
+class Category(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    name = models.CharField(max_length=200, verbose_name="نام طبقه بندی")
+    slug = models.SlugField(unique=True, verbose_name="اسلاگ")
+    is_active = models.BooleanField(default=False, verbose_name="وضعیت")
+
+
+class Amenity(models.Model):
+    # Relationship
+    property_obj = models.ManyToManyField(
+        Property, related_name="amenities", verbose_name="اقامتگاه‌ها"
+    )
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        related_name="amenities",
+        verbose_name="طبقه بندی ",
+    )
+
+    # Identity
+    name = models.CharField(max_length=50, verbose_name="نام امکانات رفاهی")
+    slug = models.SlugField(unique=True, verbose_name="اسلاگ")
+
+    # Status
+    is_active = models.BooleanField(default=False, verbose_name="وضعیت")
+
+
+# ==================================================
 #                       Images
 # ==================================================
 
@@ -256,3 +289,69 @@ class PropertyImage(models.Model):
 
     def __str__(self):
         return f"{self.Property.title} - {self.order}"
+
+
+# ===================================================
+#                Laws and regulations
+# ===================================================
+GENERAL_RULE_CHOICES = [
+    ("party", "مهمانی"),
+    ("smoking", "سیگار"),
+    ("pets", "حیوانات خانگی"),
+    ("quiet_hours", "ساعات سکوت"),
+    ("check_in", "ورود"),
+    ("check_out", "خروج"),
+]
+
+
+class PropertyRule(models.Model):
+    # Identity
+    id = models.BigAutoField(primary_key=True)
+
+    # Relations
+    propertyy = models.ForeignKey(
+        Property, on_delete=models.CASCADE, related_name="rules", verbose_name="ملک"
+    )
+    amenity = models.ForeignKey(
+        Amenity,
+        on_delete=models.CASCADE,
+        related_name="rules",
+        null=True,
+        blank=True,
+        verbose_name="امکانات",
+    )
+
+    # Classification
+    rule_key = models.CharField(
+        max_length=50,
+        choices=GENERAL_RULE_CHOICES,
+        verbose_name="",
+    )
+
+
+class PermissionRule(models.Model):
+    # Relation
+    rule = models.OneToOneField(
+        PropertyRule,
+        on_delete=models.CASCADE,
+        related_name="permission",
+        verbose_name="قانون",
+    )
+
+    # Value
+    allowed = models.BooleanField(default=False, verbose_name="مجوز")
+
+
+class TimeRule(models.Model):
+
+    # Relation
+    rule = models.OneToOneField(
+        PropertyRule,
+        on_delete=models.CASCADE,
+        related_name="time",
+        verbose_name="قانون",
+    )
+
+    # Time
+    start_time = models.TimeField()
+    end_time = models.TimeField()
