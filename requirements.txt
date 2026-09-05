@@ -3,5 +3,6 @@ Django==6.1
 django-smart-selects==1.7.2
 django-unfold==0.104.1
 djangorestframework==3.18.0
+pillow==12.3.0
 sqlparse==0.6.0
 tzdata==2026.3
