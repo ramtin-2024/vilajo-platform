@@ -301,6 +301,11 @@ GENERAL_RULE_CHOICES = [
     ("quiet_hours", "ساعات سکوت"),
     ("check_in", "ورود"),
     ("check_out", "خروج"),
+    ("extra_guests", "مهمان اضافه"),
+    ("visitors", "مراجعه‌کننده"),
+    ("age_restriction", "محدودیت سنی"),
+    ("filming", "فیلم‌برداری و عکاسی"),
+    ("event", "برگزاری مراسم"),
 ]
 
 
@@ -355,3 +360,134 @@ class TimeRule(models.Model):
     # Time
     start_time = models.TimeField()
     end_time = models.TimeField()
+
+
+class QuantityRule(models.Model):
+
+    # Relation
+    rule = models.OneToOneField(
+        PropertyRule,
+        on_delete=models.CASCADE,
+        related_name="quantity",
+        verbose_name="قانون",
+    )
+
+    # Value
+    value = models.PositiveIntegerField(
+        null=True, blank=True, verbose_name="تعداد مجاز"
+    )
+
+
+# ===================================================
+#               Cancellation Policies
+# ===================================================
+
+
+class CancellationPolicy(models.Model):
+
+    # Relations
+    property_obj = models.ForeignKey(
+        Property,
+        on_delete=models.CASCADE,
+        related_name="cancellation_policies",
+        verbose_name="اقامتگاه",
+    )
+
+    # Identity & Basic Information
+    title = models.CharField(max_length=350, verbose_name="عنوان سیاست")
+    slug = models.SlugField(unique=True, verbose_name="اسلاگ")
+    description = models.TextField(verbose_name="توضیحات تکمیلی")
+
+    # Status & Timestamps
+    is_active = models.BooleanField(default=False, verbose_name="وضعیت فعالیت")
+
+    # Timestamps
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="تاریخ و زمان ثبت"
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name="تاریخ و زمان آخرین بروزرسانی"
+    )
+
+
+class CancellationRule(models.Model):
+    # Relation
+    policy = models.ForeignKey(
+        CancellationPolicy,
+        on_delete=models.CASCADE,
+        related_name="rules",
+        verbose_name="سیاست لغو",
+    )
+
+    # Conditions
+    hours_before_checkin = models.PositiveIntegerField(
+        verbose_name="تعداد ساعت های باقی مانده"
+    )
+    hours_before_checkin_max = models.PositiveIntegerField(
+        null=True, blank=True, verbose_name="حداکثر ساعت باقی مانده "
+    )
+    # Values
+    refund_percentage = models.DecimalField(
+        max_digits=4, decimal_places=2, verbose_name="درصد بازگشت وجه"
+    )
+
+    # Additional Rules
+    charge_first_night = models.BooleanField(
+        default=False, verbose_name="کسر هزینه شب اول"
+    )
+
+    # Display & Ordering
+    note = models.CharField(
+        max_length=1000, verbose_name="توضیحات کوتاه برای نمایش در فاکتور"
+    )
+
+    priority = models.PositiveIntegerField(verbose_name="ترتیب برسی قانون")
+
+
+# ====================================================
+#         Accommodation Verification Status
+# ====================================================
+VERIFICATION_STATUS = [
+    ("pending", "در انتظار بررسی"),
+    ("approved", "تایید شده"),
+    ("rejected", "رد شده"),
+]
+
+
+class PropertyVerification(models.Model):
+    # Relation
+    propertyy = models.OneToOneField(
+        Property,
+        on_delete=models.CASCADE,
+        related_name="verification",
+        verbose_name="اقامتگاه",
+    )
+
+    # Verification Status
+    status = models.CharField(
+        max_length=20, choices=VERIFICATION_STATUS, verbose_name=""
+    )
+
+    # Verification Information
+    verified_at = models.DateTimeField(
+        null=True, blank=True, verbose_name="تاریخ و زمان تأیید"
+    )
+    # verified_by = models.ForeignKey()
+
+    # Rejection
+    rejection_reason = models.TextField(
+        max_length=1000, null=True, blank=True, verbose_name="دلیل رد "
+    )
+
+    # Notes
+    admin_note = models.TextField(
+        max_length=1000, null=True, blank=True, verbose_name="یادداشت مدیر"
+    )
+
+    # Timestamps
+    created_at = models.DateTimeField(
+        auto_now_add=True, verbose_name="تاریخ و زمان ثبت"
+    )
+    updated_at = models.DateTimeField(
+        auto_now=True, verbose_name="تاریخ و زمان آخرین بروزرسانی"
+    )
